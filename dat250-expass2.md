@@ -23,7 +23,7 @@ An actual problem was displaying the data in the database. I used some time to r
 ## Experiment 2
 Experiment2 proved more challenging than experiment1. It took me some time to get used to the syntax, and I couldn't find the right lecture notes at first. I found the lecture notes, and after a while I got the hang of it, it just took some time to get the code written down. When I was closed to finished I noticed the tests... Unfortunately I had used ArrayLists where the tests were looking for Set. I started amending the problem by changing to Set's in `Person`, but I didn't bother to do this everywhere else as I didn't see this as a crucial part of the task. I commented out the code, and let my database inspecting code prove that the persistence worked instead:
 
-![Experiment2: Console log](eclipselink\experiment-2\db_poc.png)
+![Experiment2: Console log](db_poc.png)
 
 
 ## Summary
