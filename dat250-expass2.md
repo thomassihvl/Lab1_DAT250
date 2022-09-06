@@ -18,7 +18,7 @@ java.lang.IllegalArgumentException: Unsupported class file major version 61
 It didn't seem to affect anything else in my environment so I let it be for now. 
 
 An actual problem was displaying the data in the database. I used some time to research the architecture of the Derby database, but most of the articles I found were very old. One article claimed that Eclipse had functionality for this, but the UI had been redesigned since the article was written and I didn't find it. I also took a look at setting up a server, but the download webpage looked really old and I didn't really understand what I was doing so I decided to find some software to help me instead. All the software I found was also very outdated, so I ended up writing a class `pObjectRetriever` (Persisted Object Retriever) which used the generalized logic from the experiment1 `main.js` to retrieve persisted objects and print them to the console. The result for experiment1 looked like this:
-![Experiment1: Console log](eclipselink\experiment-1\db_poc.png)
+![Experiment1: Console log](db_poc.png)
 
 ## Experiment 2
 Experiment2 proved more challenging than experiment1. It took me some time to get used to the syntax, and I couldn't find the right lecture notes at first. I found the lecture notes, and after a while I got the hang of it, it just took some time to get the code written down. When I was closed to finished I noticed the tests... Unfortunately I had used ArrayLists where the tests were looking for Set. I started amending the problem by changing to Set's in `Person`, but I didn't bother to do this everywhere else as I didn't see this as a crucial part of the task. I commented out the code, and let my database inspecting code prove that the persistence worked instead:
