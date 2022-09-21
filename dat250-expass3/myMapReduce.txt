@@ -1,0 +1,16 @@
+// Return total orders per customer
+var myMapFunc = function() {
+	emit(this.cust_id, this.items.length);
+};
+
+var myReduceFunc = function(keyCustId, nOrderItems) {
+	return Array.sum(nOrderItems);
+};
+
+db.orders.mapReduce(
+	myMapFunc,
+	myReduceFunc,
+	{out:"my_map_reduce"}
+)
+
+db.my_map_reduce.find().sort( { _id: 1 } )
